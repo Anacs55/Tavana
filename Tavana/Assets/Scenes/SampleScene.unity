@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -520,6 +520,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 760958630}
+  - component: {fileID: 760958631}
+  - component: {fileID: 760958632}
   m_Layer: 0
   m_Name: Pato
   m_TagString: Untagged
@@ -535,7 +537,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760958629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 96.8, y: 1.07, z: 134.19}
+  m_LocalPosition: {x: 96.8, y: 1.005, z: 134.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -554,6 +556,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &760958631
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760958629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.65
+  m_Radius: 0.7
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: -0.08, z: 0}
+--- !u!114 &760958632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760958629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cc96cd9a22f04458cbca796e57aa39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 760958631}
+  speed: 12
 --- !u!1 &781526941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,6 +1088,7 @@ GameObject:
   - component: {fileID: 1303402971}
   - component: {fileID: 1303402973}
   - component: {fileID: 1303402972}
+  - component: {fileID: 1303402974}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1068,14 +1103,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303402970}
-  m_LocalRotation: {x: -0, y: -0.9999989, z: -0, w: -0.001470943}
-  m_LocalPosition: {x: 0.011, y: 0.631, z: -0.245}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0.676, z: -0.42999268}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 760958630}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -180.169, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!81 &1303402972
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1127,6 +1162,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1303402974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303402970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eacb2fcf6130735469195d7ae694d24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 100
+  playerBody: {fileID: 760958630}
 --- !u!1 &1549552133
 GameObject:
   m_ObjectHideFlags: 0
