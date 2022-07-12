@@ -1,0 +1,12 @@
+- entras al mundo y estas en sala con varias puertas y puedes elegir 1
+- entras con una llave, al gastar se rompe
+- tienes que hacer un puzzle    para conseguir una llave
+-un mundo adorable
+-uno que dé mal rollo
+-pixelado
+-uno realista
+- uno subrealista
+- uno de animalitos
+
+- El personaje es fijo y solo lo puedes ver mediante reflejos o si estás controlando
+a algo que no sea el personaje, por ejemplo: verlo dormido mientras controlas a un pajarito.
